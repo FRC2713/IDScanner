@@ -19,7 +19,6 @@ public class Test {
 
 	ArrayList<String> ids;
 	ArrayList<String> coordinatingNames;
-	private Scanner scan;
 	private Scanner peopleScanner;
 	private PrintWriter peoplePrinter;
 
@@ -31,7 +30,6 @@ public class Test {
 		try {
 			ids = new ArrayList<String>();
 			coordinatingNames = new ArrayList<String>();
-			scan = new Scanner(System.in);
 			String currentDate = "";
 			File todaysFile = null;
 			File peopleData = new File(System.getProperty("user.dir") + "/people.txt");
@@ -59,13 +57,19 @@ public class Test {
 				}
 				FileWriter write = new FileWriter(todaysFile, true);
 				PrintWriter print = new PrintWriter(write);
-				String current = scan.nextLine();
+				String current = JOptionPane.showInputDialog("Enter an ID");
 				if (!ids.contains(current)) {
 					ids.add(current);	
 					coordinatingNames.add(JOptionPane.showInputDialog("What is your name?"));
 					peoplePrinter.println(current + "," + coordinatingNames.get(coordinatingNames.size() - 1));
 				}
-				print.println (current);
+				int index = 0;
+				for(int i = 0; i < ids.size(); i++) {
+					if(ids.get(i).equals(current)) {
+						index = i;
+					}
+				}
+				print.println (coordinatingNames.get(index));
 				print.flush();
 				print.close();
 				peopleWriter.flush();
