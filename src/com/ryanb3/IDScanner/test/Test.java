@@ -12,6 +12,8 @@ import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
+import com.ryanb3.SelfUpdatingJava.Update;
+
 public class Test {
 
 	// Files = IDS/Names (new line = new ID)
@@ -21,6 +23,7 @@ public class Test {
 	ArrayList<String> coordinatingNames;
 	private Scanner peopleScanner;
 	private PrintWriter peoplePrinter;
+	String currentVersion = "1.0";
 
 	public static void main(String[] args) {
 		new Test();
@@ -28,6 +31,11 @@ public class Test {
 
 	public Test() {
 		try {
+			new Update("http://rbradford.thaumavor.io/jars/IDScanner/", "IDScanner", "index.txt", currentVersion);
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}		try {
 			ids = new ArrayList<String>();
 			coordinatingNames = new ArrayList<String>();
 			String currentDate = "";

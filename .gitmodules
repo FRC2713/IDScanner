@@ -1,0 +1,3 @@
+[submodule "JavaUpdater"]
+	path = JavaUpdater
+	url = https://github.com/ryan-bradford/JavaUpdater
