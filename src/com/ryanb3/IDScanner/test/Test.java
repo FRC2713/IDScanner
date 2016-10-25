@@ -24,7 +24,7 @@ public class Test {
 	ArrayList<String> coordinatingNames;
 	private Scanner peopleScanner;
 	private PrintWriter peoplePrinter;
-	String currentVersion = "1.0";
+	String currentVersion = "1.01";
 
 	public static void main(String[] args) {
 		new Test();
@@ -83,6 +83,7 @@ public class Test {
 				print.close();
 				peopleWriter.flush();
 				peopleWriter.close();
+				JOptionPane.showConfirmDialog(null, coordinatingNames.get(index) + " has been checked in");
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
