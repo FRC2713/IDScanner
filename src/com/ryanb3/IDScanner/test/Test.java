@@ -24,7 +24,7 @@ public class Test {
 	ArrayList<String> coordinatingNames;
 	private Scanner peopleScanner;
 	private PrintWriter peoplePrinter;
-	String currentVersion = "1.01";
+	String currentVersion = "1.02";
 
 	public static void main(String[] args) {
 		new Test();
@@ -33,7 +33,7 @@ public class Test {
 	public Test() {
 		try {
 			new Update("http://rbradford.thaumavor.io/jars/IDScanner/", "IDScanner", "index.txt", currentVersion);
-		} catch (IOException e1) {
+		} catch (Exception e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}		try {
