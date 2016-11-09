@@ -24,7 +24,7 @@ public class Test {
 	ArrayList<String> coordinatingNames;
 	private Scanner peopleScanner;
 	private PrintWriter peoplePrinter;
-	String currentVersion = "1.02";
+	String currentVersion = "1.04";
 
 	public static void main(String[] args) {
 		new Test();
