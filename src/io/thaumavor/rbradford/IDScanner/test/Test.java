@@ -1,4 +1,4 @@
-package com.ryanb3.IDScanner.test;
+package io.thaumavor.rbradford.IDScanner.test;
 
 import java.io.File;
 
