@@ -13,6 +13,8 @@ import java.util.Scanner;
 
 import javax.swing.*;
 
+import com.ryanb3.SelfUpdatingJava.Update;
+
 @SuppressWarnings("InfiniteLoopStatement")
 public class Main {
 
